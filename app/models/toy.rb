@@ -1,5 +1,6 @@
 class Toy < ApplicationRecord
   belongs_to :user
+  has_many :rents, dependent: :destroy
   validates :title, presence: true, uniqueness: true
   validates :address, presence: true
   validates :price, numericality: { only_integer: true }, presence: true

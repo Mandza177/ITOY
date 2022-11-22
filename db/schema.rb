@@ -40,6 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_161157) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
 
   create_table "rents", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -80,7 +81,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_161157) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-
   add_foreign_key "rents", "toys"
   add_foreign_key "rents", "users"
   add_foreign_key "toys", "users"

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+devise_for :users
   root "pages#home"
   namespace :owner do
     resources :toys, only: [:index, :new, :create]
@@ -15,5 +17,4 @@ Rails.application.routes.draw do
   end
 
   resource :profile, only: [:show]
-
 end

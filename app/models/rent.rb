@@ -1,6 +1,6 @@
 class Rent < ApplicationRecord
-  belongs_to :toys#, dependent: destroy
-  belongs_to :user#, dependent: destroy
+  belongs_to :toys
+  belongs_to :user
 
   validates :user_id, presence: true
   validates :object_id, presence: true

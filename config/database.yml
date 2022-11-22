@@ -79,6 +79,10 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+cloudinary:
+  service: Cloudinary
+  folder: <%= Rails.env %>
+
 production:
   <<: *default
   database: ITOY_production

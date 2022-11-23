@@ -1,2 +1,16 @@
-<h1>Toys#index</h1>
-<p>Find me in app/views/toys/index.html.erb</p>
+<div class="toys_all_container text-center">
+  <h1>Dernières mises en location</h1>
+  <% @toys.each do |toy| %>
+    <div class="card m-3" style="width: 18rem;">
+      <div class="card-body border border-dark rounded">
+        <h5 class="card-title">
+          <%= toy.title  %>
+        </h5>
+        <p class="card-text">
+          <%= toy.description %>
+        </p>
+        <%= link_to toy.title, toy_path(toy) %>
+      </div>
+    </div>
+  <% end %>
+</div>

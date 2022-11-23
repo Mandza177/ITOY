@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="row">
     <div class="col-md-8">
@@ -5,7 +6,7 @@
         <h1><%= @toy.title %></h1>
       </div>
 
-      <%# <%= cl_image_tag @toy.photo.key, height: 300, width: 400, crop: :fill %>
+      <%= cl_image_tag @toy.photo.key, height: 300, width: 400, crop: :fill %>
 
       <div class="">
         <p><%= @toy.description %></p>

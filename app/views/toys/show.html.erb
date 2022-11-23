@@ -1,4 +1,19 @@
-<h1>Toys#show</h1>
-<p>Find me in app/views/toys/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="text-start">
+        <h1><%= @toy.title %></h1>
+      </div>
 
+      <%# <%= cl_image_tag @toy.photo.key, height: 300, width: 400, crop: :fill %>
 
+      <div class="">
+        <p><%= @toy.description %></p>
+      </div>
+
+      <h2><strong><%= @toy.price %>€</strong></h2>
+
+      <div class="btn btn-primary"><%= link_to "Reservation", toys_path %></div>
+    </div>
+  </div>
+</div>

@@ -22,7 +22,7 @@ puts "creating toys"
 faucon_millenium_image = URI.open("https://res.cloudinary.com/df1pesufu/image/upload/v1669135612/Capture_d_%C3%A9cran_364_ebpb10.png")
 faucon_millenium = Toy.new(title: "Faucon millennium", description: "You can build the utlimate Lego starWars", price: 150, address: "Nantes", user: pierre)
 faucon_millenium.photo.attach(io: faucon_millenium_image, filename: "nes.png", content_type: "image/png")
-faucon_millenium.save
+faucon_millenium.save!
 
 ferrari_image = URI.open("https://res.cloudinary.com/df1pesufu/image/upload/v1669135619/Capture_d_%C3%A9cran_389_v6rf09.png")
 ferrari = Toy.new(title: "Ferrari Daytona SP3", description: "Build the brand new supercar from Ferrari", price: 120, address: "Rennes", user: john)

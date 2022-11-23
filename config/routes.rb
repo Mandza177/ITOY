@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'toys/index'
+  get 'toys/show'
   devise_for :users
 root "pages#home"
 namespace :owner do

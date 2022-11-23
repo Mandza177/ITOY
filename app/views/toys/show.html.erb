@@ -1,9 +1,8 @@
 
-<div class="container d-flex justify-content-center border border-dark">
-  <div class="row">
-    <div class="col-md-8">
-      <div class="text-start">
-        <h1><%= @toy.title %></h1>
+<div class="container-toy">
+    <div class="card-toy">
+      <div class="text-start d-inline ">
+        <h1><strong><%= @toy.title %></strong></h1>
       </div>
 
       <%= cl_image_tag @toy.photo.key, height: 300, width: 400, crop: :fill %>
@@ -12,9 +11,10 @@
         <p><%= @toy.description %></p>
       </div>
 
-      <h2><strong><%= @toy.price %>€</strong></h2>
+      <hr>
 
-      <div class="btn btn-primary col-12 w-300"><%= link_to "Reservation", toys_path %></div>
+      <div class="text-end"><h2><strong><%= @toy.price %>€</strong></h2></div>
+
+      <p class="toy-btn"><%= link_to "ADD TO BAG", toys_path %></p>
     </div>
-  </div>
 </div>

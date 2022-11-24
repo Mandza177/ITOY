@@ -29,15 +29,15 @@ ferrari = Toy.new(title: "Ferrari Daytona SP3", description: "Build the brand ne
 ferrari.photo.attach(io: ferrari_image, filename: "nes.png", content_type: "image/png")
 ferrari.save!
 
-eiffel_tower_image = URI.open("https://res.cloudinary.com/df1pesufu/image/upload/v1669135613/Capture_d_%C3%A9cran_368_oqfcgj.png")
-eiffel_tower = Toy.new(title: "Eiffel Tower", description: "Build the biggest Lego ever made", price: 100, address: "Paris", user: pierre)
-eiffel_tower.photo.attach(io: eiffel_tower_image, filename: "nes.png", content_type: "image/png")
-eiffel_tower.save!
-
 bugatti_chiron_image = URI.open("https://res.cloudinary.com/df1pesufu/image/upload/v1669135544/Capture_d_%C3%A9cran_376_we7t0q.png")
 bugatti_chiron = Toy.new(title: "Bugatti Chiron", description: "Discover the ultimate french supercar", price: 130, address: "Bordeaux", user: marc)
 bugatti_chiron.photo.attach(io: bugatti_chiron_image, filename: "nes.png", content_type: "image/png")
 bugatti_chiron.save!
+
+eiffel_tower_image = URI.open("https://res.cloudinary.com/df1pesufu/image/upload/v1669135613/Capture_d_%C3%A9cran_368_oqfcgj.png")
+eiffel_tower = Toy.new(title: "Eiffel Tower", description: "Build the biggest Lego ever made", price: 100, address: "Paris", user: pierre)
+eiffel_tower.photo.attach(io: eiffel_tower_image, filename: "nes.png", content_type: "image/png")
+eiffel_tower.save!
 
 taj_mahal_image = URI.open("https://res.cloudinary.com/df1pesufu/image/upload/v1669135535/Capture_d_%C3%A9cran_382_n3gipg.png")
 taj_mahal = Toy.new(title: "The Taj Mahal", description: "The Taj Mahal is a incredible monument", price: 100, address: "Reims", user: pierre)

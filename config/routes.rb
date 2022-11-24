@@ -1,21 +1,19 @@
 Rails.application.routes.draw do
-  get 'toys/index'
-  get 'toys/show'
   devise_for :users
   root "pages#home"
-    namespace :owner do
-      resources :toys, only: [:index, :new, :create]
-      resources :rents, except: [:index, :new, :show, :create, :edit, :update, :destroy] do
-        member do
-          patch :accept
-          patch :reject
-        end
+  namespace :owner do
+    resources :toys, only: [:index, :new, :create]
+    resources :rents, except: [:index, :new, :show, :create, :edit, :update, :destroy] do
+      member do
+        patch :accept
+        patch :reject
       end
     end
+  end
 
-    resources :toys, only: [:index, :show] do
-      resources :rents, only: :create
-    end
+  resources :toys, only: [:index, :show] do
+    resources :rents, only: :create
+  end
 
-    resource :profile, only: [:show]
+  resource :profile, only: [:show]
 end

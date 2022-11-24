@@ -1,4 +1,12 @@
 <div class="toys_all_container text-center">
+  <%= form_with url: toys_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a Lego..."
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
   <h1>Dernières mises en location</h1>
   <% @toys.each do |toy| %>
     <div class="card m-3" style="width: 18rem;">

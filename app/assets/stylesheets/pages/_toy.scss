@@ -5,21 +5,41 @@
 }
 
 .card-toy {
-  background-color: lightgray;
-  box-shadow: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 5px;
 }
 
 .toy-btn {
-  position: absolute;
-  width: 300px;
+  position: relative;
   margin: 0;
   padding: 0;
   display: flex;
   height: 50px;
   align-items: center;
   justify-content: center;
-  background:rgb(9, 108, 71);
-  border: 5px solid rgb(9, 108, 71);
+  background:rgb(249, 7, 22);
+  border: 5px solid rgb(249, 7, 22);
   box-sizing: border-box;
   border-radius: 5px;
+}
+
+.pic-toy {
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.text-end {
+margin-right: 20px;
+}
+
+.toy-btn a {
+  text-decoration: none;
+  color: black;
+}
+
+.toy-btn a:hover {
+  text-decoration: none;
+  color: white;
 }

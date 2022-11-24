@@ -5,6 +5,7 @@ class ToysController < ApplicationController
 
   def show
     @toy = Toy.find(params[:id])
+    @rent = Rent.new
   end
 
 

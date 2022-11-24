@@ -1,11 +1,10 @@
-
 <div class="container-toy">
     <div class="card-toy">
-      <div class="text-start d-inline ">
+      <div class="text-start d-inline ml-5">
         <h1><strong><%= @toy.title %></strong></h1>
       </div>
 
-      <%= cl_image_tag @toy.photo.key, height: 300, width: 400, crop: :fill %>
+      <div class="pic-toy"><%= cl_image_tag @toy.photo.key, height: 300, width: 500, crop: :fill %></div>
 
       <div class="">
         <p><%= @toy.description %></p>

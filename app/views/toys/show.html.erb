@@ -8,9 +8,9 @@
         <div class="row row-cols-2">
           <div class="rents col-3">
             <%= simple_form_for [@toy, @rent] do |f| %>
-              <%= f.input :start_date, as: :date, html5: true %>
-              <%= f.input :end_date, as: :date, html5: true %>
-              <button class="schedule"><%= link_to "Schedule your rent", profile_path %></button>
+              <div class="start"><%= f.input :start_date, as: :date, html5: true %></div>
+              <div class="end"><%= f.input :end_date, as: :date, html5: true %></div>
+              <%= link_to "Schedule your rent", profile_path, class: "schedule" %>
             <% end %>
           </div>
 
@@ -24,8 +24,7 @@
         <p><%= @toy.description %></p>
       </div>
 
-      <div class="text-price"><h3><strong>Price/day</strong></h3></div>
-      <div class="text-end"><h2><strong><%= @toy.price %>€</strong></h2></div>
+      <div class="text-end"><h2><strong><%= @toy.price %>€/day</strong></h2></div>
 
     </div>
 </div>

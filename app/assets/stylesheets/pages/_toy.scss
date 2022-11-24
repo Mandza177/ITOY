@@ -1,6 +1,7 @@
 .container-toy {
   display: flex;
   justify-content: space-around;
+  font-family: 'Comfortaa', cursive;
 }
 
 
@@ -23,24 +24,24 @@
   display: flex;
   justify-content: center;
   margin-left: 300px;
+  border-color: 1px solid black;
 }
 
 .text-end {
-margin-right: 20px;
+margin-right: 70px;
 }
 
 .text-start {
-  margin-left: 300px;
+  justify-content: center;
+  display: flex;
+  margin-top: 20px;
 }
 
 .description {
-  margin-left: 5px;
+  justify-content: center;
+  display: flex;
 }
 
-.text-price {
-  margin-left: 10px;
-
-}
 
 .schedule {
   text-decoration: none;
@@ -52,17 +53,20 @@ margin-right: 20px;
   border-radius: 5px;
   display: flex;
   color: white;
-
+  margin-bottom: 20px;
 }
 
 .container {
   margin-top: 50px;
-
 }
 
 .rents {
   background-color: rgb(255, 202, 3);
-  padding-top: 80px;
+  padding-top: 40px;
   border-radius: 5px;
-  box-sizing: border-box;
+  height: fit-content;
+}
+
+.start {
+  padding-bottom: 10px;
 }

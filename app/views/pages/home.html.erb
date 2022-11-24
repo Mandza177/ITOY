@@ -47,13 +47,12 @@
 
 
   <div class="notification">
-  <% @toys.each do |toy| %>
   <a href="#"><img src="https://res.cloudinary.com/df1pesufu/image/upload/v1669135544/Capture_d_%C3%A9cran_376_we7t0q.png" class="avatar-large" /></a>
   <div class="notification-content">
     <p><%= toy.title  %></p>
     <p><%= link_to toy.title, toy_path(toy) %></p>
+    <%= @toy.price %>
   </div>
-  <% end %>
 </div>
 
 <div class="notification">

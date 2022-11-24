@@ -1,5 +1,16 @@
+  <h2 class="p-3">Find your Lego !</h2>
 <div class="toys_all_container text-center p-1">
-  <%= form_with url: toys_path, method: :get, class: "d-flex" do %>
+  <%= form_with url: toys_path, method: :get, class: "d-flex p-3" do %>
+    <select name="cities" id="city-select">
+      <option value="">--Your City--</option>
+      <option value="Toulouse">Toulouse</option>
+      <option value="La Rochelle">La Rochelle</option>
+      <option value="Reims">Reims</option>
+      <option value="Bordeaux">Bordeaux</option>
+      <option value="Paris">Paris</option>
+      <option value="Rennes">Rennes</option>
+      <option value="Nantes">Nantes</option>
+    </select>
     <%= text_field_tag :query,
       params[:query],
       class: "form-control",
@@ -7,8 +18,8 @@
     %>
     <%= submit_tag "Search", class: "btn btn-primary" %>
   <%  end %>
-  <h1>Dernières mises en location</h1>
-  <% @toys.each do |toy| %>
+  <% if @toys.present?
+    @toys.each do |toy| %>
     <div class="card m-3" style="width: 18rem;">
       <div class="card-body border border-dark rounded">
         <h5 class="card-title">
@@ -20,5 +31,8 @@
         <%= link_to toy.title, toy_path(toy) %>
       </div>
     </div>
+    <% end %>
+    <% else %>
+  <h3>No Results</h3>
   <% end %>
 </div>

@@ -1,14 +1,9 @@
 .container-toy {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
+  font-family: 'Comfortaa', cursive;
 }
 
-.card-toy {
-  background-color: rgb(255, 255, 255);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  border-radius: 5px;
-}
 
 .toy-btn {
   position: relative;
@@ -28,18 +23,50 @@
   object-fit: cover;
   display: flex;
   justify-content: center;
+  margin-left: 300px;
+  border-color: 1px solid black;
 }
 
 .text-end {
-margin-right: 20px;
+margin-right: 70px;
 }
 
-.toy-btn a {
-  text-decoration: none;
-  color: black;
+.text-start {
+  justify-content: center;
+  display: flex;
+  margin-top: 20px;
 }
 
-.toy-btn a:hover {
+.description {
+  justify-content: center;
+  display: flex;
+}
+
+
+.schedule {
   text-decoration: none;
+  position: relative;
+  justify-content: center;
+  background:rgb(249, 7, 22);
+  border: 5px solid rgb(249, 7, 22);
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;
   color: white;
+  margin-bottom: 20px;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.rents {
+  background-color: rgb(255, 202, 3);
+  padding-top: 40px;
+  border-radius: 5px;
+  height: fit-content;
+}
+
+.start {
+  padding-bottom: 10px;
 }

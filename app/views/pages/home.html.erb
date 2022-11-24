@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://ichef.bbci.co.uk/news/976/cpsprodpb/2124/production/_111748480_hi061000031.jpg.webp);">
+<div class="banner">
   <div class="container">
     <h1>ITOY</h1>
     <p>Change your life and rent or owner your toys.</p>
@@ -12,19 +12,18 @@
                 </picture>
             </div>
             <h1 class="text">
-                Find your toys
+            <i class="fa-solid fa-location-dot"></i>
+                Find your toys</i>
                 <br>
             <h2 class="text2">
-                Rent it
+            <i class="fa-duotone fa-coins">
+                Rent it</i>
             </h2>
             <h3 class="text3">
+            <i class="fa-solid fa-face-smile-tongue"></i>
                 enjoy
             </h3>
 
-
-
-
-    <%= render "shared/searchbar" %>
 
 <%# <div class="row pd">
                     <button id="widget-signup-btn" data-widget="onboarding" data-widget-step="user-status" class="full-width btn btn--ghost btn--dark" onclick="hj('trigger', 'homepage_signup_btn_widget_email');">
@@ -46,14 +45,15 @@
       </div>
       <h2>View announces</h2>
 
-<div class="notification">
 
+  <div class="notification">
+  <% @toys.each do |toy| %>
   <a href="#"><img src="https://res.cloudinary.com/df1pesufu/image/upload/v1669135544/Capture_d_%C3%A9cran_376_we7t0q.png" class="avatar-large" /></a>
-
   <div class="notification-content">
-    <p><small>14th January</small></p>
-    <p>Buggati lego, <strong>super état</strong> envoi possible.</p>
+    <p><%= toy.title  %></p>
+    <p><%= link_to toy.title, toy_path(toy) %></p>
   </div>
+  <% end %>
 </div>
 
 <div class="notification">
@@ -65,7 +65,13 @@
     <p>Taj Mahal, <strong>bonne état</strong> mains propre.</p>
   </div>
 </div>
+</div>
+</div>
 
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
 <div class="footer">
   <div class="footer-links">
@@ -78,4 +84,5 @@
   <div class="footer-copyright">
     Enjoy <i class="fas fa-heart"></i> your toys
   </div>
+</div>
 </div>

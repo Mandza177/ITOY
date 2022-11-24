@@ -1,26 +1,27 @@
-<div class="banner">
+<div class="banner" style="background-image: url(<%= image_url('Casques-LEGO-Star-Wars-Helmets-2020.jpeg')%>)" >
   <div class="container">
     <h1>ITOY</h1>
-    <p>Change your life and rent or owner your toys.</p>
-    <a class="btn btn-flat" href="#">Let's GO</a>
+      <p> Change your life and rent or owner your toys.</p>
+    <a class="btn btn-flat" href="toys/index">Let's GO</a>
   </div>
 </div>
 
-<div class="container container--large z-2 flex flex-wrap flex-end pd-vt-xxl">
-  <div class="relative col-3-5 z-1 flex flex-column">
+
+
     <div class="home-top-background">
+    <div class="banner2">
     <h1 class="text">
     <i class="fa-solid fa-location-dot"></i>
         Find your toys
         <br>
     </h1>
     <h2 class="text2">
-    <i class="fa-duotone fa-coins"></i>
+    <i class="fa-duotone coins"></i>
         Rent it
     </h2>
     <h3 class="text3">
-    <i class="fa-solid fa-face-smile-tongue"></i>
-        enjoy
+    <i class="fa-solid fa-face-smile"></i>
+        Enjoy it
     </h3>
     </div>
   </div>
@@ -37,29 +38,27 @@
         </div> %>
 
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+  <div class="row d-flex justify-content-center">
+
       <ul class="list-group mb-3"></ul>
-
-      <%# <%= link_to "Add a new lists", new_lists_path, class: 'btn btn-primary' %>
-<h2>View announces</h2>
-
-  <div class="container">
-  <div class="notification">
-    <% @toys.each do |toy| %>
-      <%= link_to toy_path(toy) do %>
-      <div class="d-flex">
-        <%= cl_image_tag(toy.photo.key,
-          class: "avatar-large") %>
-        <div class="notification-content">
-          <p><%= toy.title  %></p>
+        <div class="container-xxl">
+        <h2>New announcements</h2>
+        <div class=" d-flex notification justify-content-between">
+          <% @toys.each do |toy| %>
+            <%= link_to toy_path(toy) do %>
+            <div class="d-flex card"  style = "height: 150px;">
+              <%= cl_image_tag(toy.photo.key, class: "avatar-large") %>
+              <div class="notification-content">
+                <p><strong><%= toy.title  %></p></strong>
+              </div>
+            </div>
+            <% end %>
+          <% end %>
         </div>
-      </div>
-      <% end %>
-    <% end %>
+        </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
   </div>
-
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+</div>

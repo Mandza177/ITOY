@@ -15,18 +15,23 @@
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  width: 100%;
+.card{
+  border-radius: 10%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+
+.card p{
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+}
+
 
 .banner {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  background-image: url("app/assets/images/Casques-LEGO-Star-Wars-Helmets-2020.jpeg");
 }
 
 .banner h1 {
@@ -38,22 +43,27 @@
 }
 
 .banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  opacity: 1;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner2 {
+  background-color: #f6ce05;
+  padding: 50px 0;
 }
 
 .btn-flat {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #670BFF;
+  background: #e10505;
   transition: 0.3s ease;
 }
 
 .btn-flat:hover {
-  background: #4D04C4;
+  background: #e30a0a;
   color: white;
 }
 
@@ -64,7 +74,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color:#be3b3b;
+  color:#e10505;
 }
 
 .text2{
@@ -78,7 +88,7 @@
 
 .text3{
   font-size: 40px;
-  font-family: cursive;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,9 +98,9 @@
   display: flex;
   align-items: center;
   margin-bottom: 8px;
-  background: white;
+  background: rgba(255, 255, 255, 0);
   padding: 8px 16px;
-  border: 1px solid rgb(235,235,235);
+  border: 1px solid rgba(235, 235, 235, 0);
 }
 
 .notification .notification-content {
@@ -99,6 +109,7 @@
 }
 
 .notification p {
+
   margin: 0;
   line-height: 1.4;
 }
@@ -133,7 +144,7 @@
 }
 
 .avatar-large {
-  width: 56px;
+  width: 200px;
   border-radius: 50%;
 }
 

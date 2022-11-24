@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  get 'rents/create'
+  get 'rents/update'
+  get 'rents/destroy'
+  get 'toys/index'
+  get 'toys/show'
+
+
   devise_for :users
   root "pages#home"
   namespace :owner do

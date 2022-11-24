@@ -1,19 +1,31 @@
 <div class="container-toy">
     <div class="card-toy">
-      <div class="text-start d-inline ml-5">
-        <h1><strong><%= @toy.title %></strong></h1>
+      <div class="text-start">
+        <h2><strong><%= @toy.title %></strong></h2>
       </div>
 
-      <div class="pic-toy"><%= cl_image_tag @toy.photo.key, height: 300, width: 500, crop: :fill %></div>
+      <div class="container">
+        <div class="row row-cols-2">
+          <div class="rents col-3">
+            <%= simple_form_for [@toy, @rent] do |f| %>
+              <%= f.input :start_date, as: :date, html5: true %>
+              <%= f.input :end_date, as: :date, html5: true %>
+              <button class="schedule"><%= link_to "Schedule your rent", profile_path %></button>
+            <% end %>
+          </div>
 
-      <div class="">
+          <div class="col">
+            <div class="pic-toy"><%= cl_image_tag @toy.photo.key, height: 400, width: 700, crop: :fill %></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="description">
         <p><%= @toy.description %></p>
       </div>
 
-      <hr>
-
+      <div class="text-price"><h3><strong>Price/day</strong></h3></div>
       <div class="text-end"><h2><strong><%= @toy.price %>€</strong></h2></div>
 
-      <p class="toy-btn"><%= link_to "ADD TO BAG", toys_path %></p>
     </div>
 </div>

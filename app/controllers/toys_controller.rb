@@ -1,4 +1,9 @@
 class ToysController < ApplicationController
+  def home
+    # @toys = Toy.all
+    # @toy = Toy.find(params[:id])
+  end
+
   def index
     if params[:query].present? && params[:cities].present?
       @toys = Toy.where(city: params[:cities]).where("title ILIKE ?", "%#{params[:query]}%")

@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+
 User.destroy_all
 
 puts "creating user"
@@ -29,15 +30,15 @@ ferrari = Toy.new(title: "Ferrari Daytona SP3", description: "Build the brand ne
 ferrari.photo.attach(io: ferrari_image, filename: "nes.png", content_type: "image/png")
 ferrari.save!
 
-eiffel_tower_image = URI.open("https://res.cloudinary.com/df1pesufu/image/upload/v1669135613/Capture_d_%C3%A9cran_368_oqfcgj.png")
-eiffel_tower = Toy.new(title: "Eiffel Tower", description: "Build the biggest Lego ever made", price: 100, city: "Paris", user: pierre)
-eiffel_tower.photo.attach(io: eiffel_tower_image, filename: "nes.png", content_type: "image/png")
-eiffel_tower.save!
-
 bugatti_chiron_image = URI.open("https://res.cloudinary.com/df1pesufu/image/upload/v1669135544/Capture_d_%C3%A9cran_376_we7t0q.png")
 bugatti_chiron = Toy.new(title: "Bugatti Chiron", description: "Discover the ultimate french supercar", price: 130, city: "Bordeaux", user: marc)
 bugatti_chiron.photo.attach(io: bugatti_chiron_image, filename: "nes.png", content_type: "image/png")
 bugatti_chiron.save!
+
+eiffel_tower_image = URI.open("https://res.cloudinary.com/df1pesufu/image/upload/v1669135613/Capture_d_%C3%A9cran_368_oqfcgj.png")
+eiffel_tower = Toy.new(title: "Eiffel Tower", description: "Build the biggest Lego ever made", price: 100, city: "Paris", user: pierre)
+eiffel_tower.photo.attach(io: eiffel_tower_image, filename: "nes.png", content_type: "image/png")
+eiffel_tower.save!
 
 taj_mahal_image = URI.open("https://res.cloudinary.com/df1pesufu/image/upload/v1669135535/Capture_d_%C3%A9cran_382_n3gipg.png")
 taj_mahal = Toy.new(title: "The Taj Mahal", description: "The Taj Mahal is a incredible monument", price: 100, city: "Reims", user: pierre)
@@ -61,9 +62,9 @@ the_poudlard_express.save!
 
 puts "creating toys done"
 
-# Toy.new(title: "The starry night", description: "Create your Van Gogh", price: 90, address: "Nice")
-# Toy.new(title: "Apollo Saturn V", description: "Your next fly to the moon", price: 50, address: "Orléans")
-# Toy.new(title: "Razor Crest", description: "Who want to become the next Mandalorian?", price: 140, address: "Lyon")
-# Toy.new(title: "AT-AT", description: "Killer Dog", price: 180, address: "Bordeaux")
-# Toy.new(title: "R2-D2", description: "Your new Best-friend", price: 90, address: "Poitiers")
-# Toy.new(title: "Imperial Star Destroyer", description: "Your uber's just arrived", price 200, address: "Alençon")
+# Toy.new(title: "The starry night", description: "Create your Van Gogh", price: 90, city: "Nice")
+# Toy.new(title: "Apollo Saturn V", description: "Your next fly to the moon", price: 50, city: "Orléans")
+# Toy.new(title: "Razor Crest", description: "Who want to become the next Mandalorian?", price: 140, city: "Lyon")
+# Toy.new(title: "AT-AT", description: "Killer Dog", price: 180, city: "Bordeaux")
+# Toy.new(title: "R2-D2", description: "Your new Best-friend", price: 90, city: "Poitiers")
+# Toy.new(title: "Imperial Star Destroyer", description: "Your uber's just arrived", price 200, city: "Alençon")

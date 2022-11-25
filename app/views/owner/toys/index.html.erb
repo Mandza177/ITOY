@@ -1,0 +1,28 @@
+<div class="text-center">
+  <h2>Here are all the <strong id="red-word">toys</strong> you are sharing!</h2>
+</div>
+
+
+<div class="wrapper-dashboard padded">
+  <ul class="list-unstyled">
+    <% @toys.each do |toy| %>
+    <li class="padded dashboard">
+      <%# <%= cl_image_tag %> %>
+
+      <div class='product-body'>
+
+        <h2><strong><%= toy.title %></strong></h2>
+        <h4>Located in <strong><%= toy.city %></strong></h4>
+        <h4>Description: <%=toy.description%></h4>
+        <h4>Price: <strong><%= toy.price %>€/day </strong></h4>
+      </div>
+
+      <ul class="list-inline hidden-sm hidden-xs">
+        <%= link_to "Edit this toy", edit_toy_path(toy), class:"btn btn-primary"%>
+      </ul>
+
+    </li>
+      <hr>
+      <% end %>
+  </ul>
+</div>

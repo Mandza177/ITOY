@@ -8,4 +8,5 @@ class Rent < ApplicationRecord
   validates :end_date, presence: true
   validates :total_price, presence: true
   validates :acceptation, presence: true
+  #validates :status, inclusion: { in: ["Pending guest request", "Pending host validation", "Confirmed", "Canceled"], allow_nil: true }
 end

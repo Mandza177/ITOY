@@ -1,61 +1,49 @@
-<div class="profile-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t3.ftcdn.net/jpg/01/65/67/38/360_F_165673842_Yajw5XKVpZ497xohG6H0lNp1jFBgikL7.jpg);">
-  <div class="container image-profil d-flex justify-content-center align-items-center">
-    <p>Glad to See You ! Here we go for a little sum up of your account</p>
+<div class="profile-banner">
+  <p>Glad to See You <%= current_user.name %> !</p>
+  <p> Here we go for a little sum up of your account</p>
+</div>
+<div class="container rents-owners">
+  <div class="row">
+    <div class="col-6 d-flex">
+      <p> The LEGOS I rent </p>
+      <div class="wrapper-dashboard padded">
+        <ul class="list-unstyled">
+          <% @rents.each do |rent| %>
+          <li class="padded dashboard">
+            <div class='product-body'>
+              <p>Total Price: <strong><%= rent.total_price %></strong></p>
+              <p>Start Date: <strong><%= rent.start_date %>/</strong></p>
+              <p>End date: <strong><%= rent.end_date %></strong></p>
+              <p>Accepted?: <strong><%= rent.acceptation %></strong></p>
+              <p>The user is: <strong><%= rent.user_id %></strong></p>
+            </div>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  <div class="col-6 d-flex justify-content align-items-center">
+    <p>Mes locations</p>
+    <div class="col-6 d-flex">
+      <p> The rents people did to me</p>
+      <div class="wrapper-dashboard padded">
+        <ul class="list-unstyled">
+          <% @my_rents.each do |rent| %>
+          <li class="padded dashboard">
+            <div class='product-body'>
+              <p>Total Price: <strong><%= rent.total_price %></strong></p>
+              <p>Start Date: <strong><%= rent.start_date %>/</strong></p>
+              <p>End date: <strong><%= rent.end_date %></strong></p>
+              <p>Accepted?: <strong><%= rent.acceptation %></strong></p>
+              <p>The user is: <strong><%= rent.user_id %></strong></p>
+            </div>
+          </li>
+          <%= button_to "Accept request", accept_owner_rent_path(rent), method: :patch %>
+          <%= button_to "Decline request", reject_owner_rent_path(rent), method: :patch %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
-
-  <div class="container rents-owners">
-    <div class="row">
-      <div class="col-6 d-flex">
-       <p> The rents I have done</p>
-        <div class="wrapper-dashboard padded">
-          <ul class="list-unstyled">
-            <% @rents.each do |rent| %>
-            <li class="padded dashboard">
-              <%# <%= cl_image_tag %> %>
-
-
-
-                 <div class='product-body'>
-                <p>Total Price: <strong><%= rent.total_price %></strong></p>
-                <p>Start Date: <strong><%= rent.start_date %>/</strong></p>
-                <p>End date: <strong><%= rent.end_date %></strong></p>
-                <p>Accepted?: <strong><%= rent.acceptation %></strong></p>
-                <p>The user is: <strong><%= rent.user_id %></strong></p>
-              </div>
-
-
-
-            </li>
-              <hr>
-              <% end %>
-          </ul>
-        </div>
-      </div>
-      <div class="col-6 d-flex justify-content align-items-center">
-      <p>Mes locations</p>
-        <div class="col-6 d-flex">
-      <p> The rents people did to me</p>
-        <div class="wrapper-dashboard padded">
-          <ul class="list-unstyled">
-            <% @my_rents.each do |rent| %>
-            <li class="padded dashboard">
-              <%# <%= cl_image_tag %> %>
-
-              <div class='product-body'>
-                <p>Total Price: <strong><%= rent.total_price %></strong></p>
-                <p>Start Date: <strong><%= rent.start_date %>/</strong></p>
-                <p>End date: <strong><%= rent.end_date %></strong></p>
-                <p>Accepted?: <strong><%= rent.acceptation %></strong></p>
-                <p>The user is: <strong><%= rent.user_id %></strong></p>
-              </div>
-            </li>
-              <hr>
-              <%= button_to "Accept request", accept_owner_rent_path(rent), method: :patch %>
-              <%= button_to "Decline request", reject_owner_rent_path(rent), method: :patch %>
-              <% end %>
-          </ul>
-        </div>
-      </div>
-      </div>
-  </div>
+</div>

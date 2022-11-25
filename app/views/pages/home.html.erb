@@ -1,5 +1,5 @@
 <div class="banner" style="background-image: url(<%= image_url('Casques-LEGO-Star-Wars-Helmets-2020.jpeg')%>)" >
-  <div class="container">
+  <div class="container-home">
     <h1>ITOY</h1>
       <strong><p> Change your life and rent or owner your toys.</p></strong>
     <a class="btn btn-flat" href="toys/index">Let's GO</a>
@@ -42,13 +42,13 @@
       <ul class="list-group mb-3"></ul>
         <div class="container-xxl">
         <h2>New announcements</h2>
-        <div class=" d-flex notification justify-content-between">
+        <div class=" d-flex notification justify-content-around">
           <% @toys.each do |toy| %>
-            <%= link_to toy_path(toy) do %>
-            <div class="d-flex card"  style = "height: 150px;">
+            <%= link_to toy_path(toy), class:"toy-title" do %>
+            <div class="d-flex card" >
               <%= cl_image_tag(toy.photo.key, class: "avatar-large") %>
               <div class="notification-content">
-                <p><strong><%= toy.title  %></p></strong>
+                <p><strong><%= toy.title  %></strong></p>
               </div>
             </div>
             <% end %>

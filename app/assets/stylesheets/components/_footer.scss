@@ -5,8 +5,9 @@
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
-  color: rgba(14, 52, 240, 0.986);
+  font-family:'Comfortaa', cursive;
 }
+
 .footer-links {
   display: flex;
   align-items: center;
@@ -21,5 +22,5 @@
   opacity: 1;
 }
 .footer .fa-heart {
-  color: #e9e91a;
+  color: rgb(226, 194, 14);
 }

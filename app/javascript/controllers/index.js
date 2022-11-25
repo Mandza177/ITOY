@@ -3,9 +3,5 @@
 // ./bin/rails generate stimulus controllerName
 
 import { application } from "./application"
-
-import FlatpickrController from "./flatpickr_controller"
-application.register("flatpickr", FlatpickrController)
-
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)

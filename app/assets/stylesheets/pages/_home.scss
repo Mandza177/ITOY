@@ -12,10 +12,22 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:'Comfortaa', cursive;
+}
+h1{
+  font-family:'Comfortaa', cursive;
+}
+.container-home{
+  position: relative;
+  top: 30vh; left: 40px;
+}
+.container-home p{
+  font-family:'Comfortaa', cursive;
 }
 
 .card{
+  height: 220px;
+  width: 250px;
   border-radius: 10%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
@@ -24,14 +36,16 @@
   color: black;
   text-decoration: none;
   text-align: center;
-  font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+  position: relative;
+  top: 30px;
+  font-family: 'Comfortaa', cursive;
 }
 
 
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  height: 90vh;
 }
 
 .banner h1 {
@@ -49,13 +63,12 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.banner2 {
-  background-color: #f6ce05;
-  padding: 50px 0;
+h2 {
+  font-family:'Comfortaa', cursive;
 }
 
 .btn-flat {
-  color: white;
+  color: rgb(226, 194, 14);
   padding: 8px 24px;
   border-radius: 4px;
   background: #e10505;
@@ -84,6 +97,7 @@
   justify-content: center;
   align-items: center;
   color:#483a92;
+
   a {
     text-decoration: none;
   }
@@ -91,7 +105,7 @@
 
 .text3{
   font-size: 40px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Comfortaa', cursive;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,12 +156,11 @@
 }
 
 .avatar {
-  width: 40px;
   border-radius: 50%;
 }
 
 .avatar-large {
-  width: 200px;
+  width: 240px;
   border-radius: 50%;
 }
 
@@ -165,6 +178,11 @@
   border: white 1px solid;
 }
 
+.toy-title {
+  text-decoration: none;
+  font-family:'Comfortaa', cursive;
+  color: #e01717;
+}
 // display: grid;
 // grid-template-columns: 1fr 1fr 1fr 1fr;
 // grid-gap: 16px;

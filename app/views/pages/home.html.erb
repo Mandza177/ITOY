@@ -1,26 +1,30 @@
-
-
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://ichef.bbci.co.uk/news/976/cpsprodpb/2124/production/_111748480_hi061000031.jpg.webp)">
-ITOY
+<div class="banner" style="background-image: url(<%= image_url('Casques-LEGO-Star-Wars-Helmets-2020.jpeg')%>)" >
+  <div class="container">
+    <h1>ITOY</h1>
+      <strong><p> Change your life and rent or owner your toys.</p></strong>
+    <a class="btn btn-flat" href="toys/index">Let's GO</a>
+  </div>
 </div>
 
-<div class="container container--large z-2 flex flex-wrap flex-end pd-vt-xxl">
-        <div class="relative col-3-5 z-1 flex flex-column">
-            <div class="home-top-background">
-                </picture>
-            </div>
-            <h1 class="text">
-                Find your toys
-                <br>
-            <h2 class="text2">
-                <%= link_to "Rent it", toys_path %>
-            </h2>
-            <h3 class="text3">
-                enjoy
-            </h3>
-
-
-    <%= render "shared/searchbar" %>
+<%#
+    <div class="home-top-background">
+    <div class="banner2">
+    <h1 class="text">
+    <i class="fa-solid fa-location-dot"></i>
+        Find your toys
+        <br>
+    </h1>
+    <h2 class="text2">
+    <i class="fa-duotone coins"></i>
+        Rent it
+    </h2>
+    <h3 class="text3">
+    <i class="fa-solid fa-face-smile"></i>
+        Enjoy it
+    </h3>
+    </div>
+  </div>
+</div> %>
 
 <%# <div class="row pd">
                     <button id="widget-signup-btn" data-widget="onboarding" data-widget-step="user-status" class="full-width btn btn--ghost btn--dark" onclick="hj('trigger', 'homepage_signup_btn_widget_email');">
@@ -32,44 +36,28 @@ ITOY
                 </div>
         </div> %>
 
-</div>
-  <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <ul class="list-group mb-3">
-      </ul>
-      <%# <%= link_to "Add a new lists", new_lists_path, class: 'btn btn-primary' %>
-      </div>
-      <h2>View announces</h2>
+<div class="container">
+  <div class="row d-flex justify-content-center">
 
-<div class="notification">
-
-  <a href="#"><img src="https://res.cloudinary.com/df1pesufu/image/upload/v1669135544/Capture_d_%C3%A9cran_376_we7t0q.png" class="avatar-large" /></a>
-
-  <div class="notification-content">
-    <p><small>14th January</small></p>
-    <p>Buggati lego, <strong>super état</strong> envoi possible.</p>
-  </div>
-</div>
-
-<div class="notification">
-
-  <a href="#"><img src='https://res.cloudinary.com/df1pesufu/image/upload/v1669135535/Capture_d_%C3%A9cran_382_n3gipg.png' class="avatar-large"/></a>
-
-  <div class="notification-content">
-    <p><small>9th January</small></p>
-    <p>Taj Mahal, <strong>bonne état</strong> mains propre.</p>
-  </div>
-</div>
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    Enjoy <i class="fas fa-heart"></i> your toys
+      <ul class="list-group mb-3"></ul>
+        <div class="container-xxl">
+        <h2>New announcements</h2>
+        <div class=" d-flex notification justify-content-between">
+          <% @toys.each do |toy| %>
+            <%= link_to toy_path(toy) do %>
+            <div class="d-flex card"  style = "height: 150px;">
+              <%= cl_image_tag(toy.photo.key, class: "avatar-large") %>
+              <div class="notification-content">
+                <p><strong><%= toy.title  %></p></strong>
+              </div>
+            </div>
+            <% end %>
+          <% end %>
+        </div>
+        </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
   </div>
 </div>

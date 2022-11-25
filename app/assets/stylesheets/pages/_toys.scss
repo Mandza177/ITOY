@@ -1,3 +1,63 @@
-.toys_all_container{
+.container_search{
   margin:0 auto;
+}
+
+.container {
+  font-family: 'Comfortaa', cursive;
+  // margin: 1em 0;
+  // padding: 0;
+  // max-width: 30em;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 16px;
+}
+
+.row {
+
+}
+
+.toy-title {
+  justify-content: center;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+
+}
+
+.card {
+  height: 150px;
+  border-radius: 1px;
+  box-shadow: 0 3px 10px 0 #aaa;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 22px;
+  color: white;
+  font-weight: bolder;
+  border-radius: 3px;
+  position: relative;
+  height: fit-content;
+}
+
+/*Media Queries*/
+
+@media (max-width: 1100px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    width: calc(280px * 2);
+  }
+  .card {
+    margin: 0 auto 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    display: block;
+    width: 100vw;
+  }
+  .card {
+    margin: 0 auto 2rem;
+  }
 }

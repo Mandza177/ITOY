@@ -1,7 +1,8 @@
 .profile-banner {
   background-size: cover;
   background-position: center;
-  // height: 50px;
+  height: 250px;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t3.ftcdn.net/jpg/01/65/67/38/360_F_165673842_Yajw5XKVpZ497xohG6H0lNp1jFBgikL7.jpg);
 }
 
 .profile-banner p {
@@ -16,3 +17,8 @@
 .image-profil{
   height: 200px;
 }
+
+// .wrapper-dashboard{border:1px solid red}
+// .rents-owners{border:1px solid green}
+// .list-unstyled{border:1px solid blueviolet}
+// .product-body{border:1px dashed rgb(147, 142, 15)}

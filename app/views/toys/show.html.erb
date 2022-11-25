@@ -10,7 +10,7 @@
             <%= simple_form_for [@toy, @rent] do |f| %>
               <div class="start"><%= f.input :start_date, as: :date, html5: true %></div>
               <div class="end"><%= f.input :end_date, as: :date, html5: true %></div>
-              <%= link_to "Schedule your rent", profile_path, class: "schedule" %>
+              <%= f.submit "Schedule your rent", class: "schedule" %>
             <% end %>
           </div>
 

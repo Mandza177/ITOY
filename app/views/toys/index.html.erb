@@ -18,14 +18,17 @@
     %>
     <%= submit_tag "Search", class: "btn btn-primary" %>
   <%  end %>
-  <div class="container">
+
+  <hr>
+  
+  <div class="container1">
     <% if @toys.present?
       @toys.each do |toy| %>
 
           <div class="row g-2 align-items-stretch">
             <h5>
-              <%= link_to toy_path(toy), class:"toy-title" do %>
-                <div class="card col-6" style="width: 18rem;">
+              <%= link_to toy_path(toy), class:"toy-title1" do %>
+                <div class="card1 col-6" style="width: 18rem;">
                 <%= cl_image_tag(toy.photo.key, class: "avatar-large") %>
                 <p><%= toy.title %></p>
                 </div>

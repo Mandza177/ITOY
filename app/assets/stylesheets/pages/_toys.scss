@@ -2,23 +2,19 @@
   margin:0 auto;
 }
 
-.container {
+.container1 {
   font-family: 'Comfortaa', cursive;
-  // margin: 1em 0;
-  // padding: 0;
-  // max-width: 30em;
   flex-grow: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
   padding: 16px;
-}
-
-.row {
+  margin-left: 80px;
 
 }
 
-.toy-title {
+
+.toy-title1 {
   justify-content: center;
   text-align: center;
   color: black;
@@ -26,18 +22,17 @@
 
 }
 
-.card {
-  height: 150px;
+.card1 {
+  background-color: white;
+  height: 200px;
   border-radius: 1px;
   box-shadow: 0 3px 10px 0 #aaa;
   align-items: center;
   justify-content: space-around;
   font-size: 22px;
-  color: white;
   font-weight: bolder;
   border-radius: 3px;
   position: relative;
-  height: fit-content;
 }
 
 /*Media Queries*/

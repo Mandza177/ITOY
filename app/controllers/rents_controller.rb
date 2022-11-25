@@ -1,8 +1,16 @@
 class RentsController < ApplicationController
   def create
-    @rent = Rent.new(params[:rent])
-    @rent.save
-    redirect_to profile_path(@profile)
+    @rent = Rent.new(rent_params)
+    @rent.acceptation = "pending"
+    @rent.user = current_user
+    @rent.total_price = 0
+    @toy = Toy.find(params[:toy_id])
+    @rent.toy = @toy
+    if @rent.save
+      redirect_to owner_rents_path
+    else
+      render "toys/show", status: :unprocessable_entity
+    end
   end
 
   def update
@@ -19,6 +27,6 @@ class RentsController < ApplicationController
   private
 
   def rent_params
-    params.require(:rent).permit(:start_time, :end_time, :total_price)
+    params.require(:rent).permit(:start_date, :end_date, :total_price)
   end
 end

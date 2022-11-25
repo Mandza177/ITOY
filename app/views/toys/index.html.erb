@@ -1,5 +1,5 @@
   <h2 class="p-3">Find your Lego !</h2>
-<div class="toys_all_container text-center p-1">
+<div class="container_search text-center p-1">
   <%= form_with url: toys_path, method: :get, class: "d-flex p-3" do %>
     <select name="cities" id="city-select">
       <option value="">--Your City--</option>
@@ -18,21 +18,23 @@
     %>
     <%= submit_tag "Search", class: "btn btn-primary" %>
   <%  end %>
-  <% if @toys.present?
-    @toys.each do |toy| %>
-    <div class="card m-3" style="width: 18rem;">
-      <div class="card-body border border-dark rounded">
-        <h5 class="card-title">
-          <%= toy.title  %>
-        </h5>
-        <p class="card-text">
-          <%= toy.description %>
-        </p>
-        <%= link_to toy.title, toy_path(toy) %>
-      </div>
-    </div>
-    <% end %>
-    <% else %>
-  <h3>No Results</h3>
+  <div class="container">
+    <% if @toys.present?
+      @toys.each do |toy| %>
+
+          <div class="row g-2 align-items-stretch">
+            <h5>
+              <%= link_to toy_path(toy), class:"toy-title" do %>
+                <div class="card col-6" style="width: 18rem;">
+                <%= cl_image_tag(toy.photo.key, class: "avatar-large") %>
+                <p><%= toy.title %></p>
+                </div>
+              <% end %>
+            </h5>
+          </div>
+      <% end %>
+      <% else %>
+  </div>
+    <h3>No Results</h3>
   <% end %>
 </div>

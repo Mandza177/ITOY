@@ -51,7 +51,7 @@ bonsai.save!
 
 the_poudlard_express_image = URI.open("https://res.cloudinary.com/df1pesufu/image/upload/v1669135541/Capture_d_%C3%A9cran_372_k9y4lr.png")
 the_poudlard_express = Toy.new(title: "the Poudlard Express", description: "Get your ticket to Poudlard. Step aboard the iconic LEGO® Harry Potter™ 75955 Hogwarts™ Express train from King’s Cross Station, featuring a railway bridge with a clock and steps leading to Platform 9¾™, moving brick wall entrance, ‘Wanted’ poster and Daily Prophet newspapers, plus a train toy and carriage with 4 seats and removable side panel and roof. Order candy from the Trolley Witch, fly the Dementor™ into the carriage and recreate fantasy realm scenes from blockbuster Harry Potter™ movies. This great LEGO Harry Potter gift also includes 5 minifigures plus Dementor and Scabbers™ figures. ", price: 120, city: "Toulouse", user: pierre)
-the_poudlard_express.photo.attach(io: the_poudlard_express_image, filename: "nes.png", content_type: "image/png")
+Pthe_poudlard_express.photo.attach(io: the_poudlard_express_image, filename: "nes.png", content_type: "image/png")
 the_poudlard_express.save!
 
 puts "creating toys done"

@@ -4,43 +4,42 @@
 </div>
 <div class="container rents-owners">
   <div class="row">
-    <div class="col-6 d-flex">
-      <p> The LEGOS I rent </p>
-      <div class="wrapper-dashboard padded">
+    <div class="col-6">
+      <h2> The LEGOS I rent </h2>
+      <div class="wrapper-dashboard padded flex">
         <ul class="list-unstyled">
           <% @rents.each do |rent| %>
-          <li class="padded dashboard">
+          <li class="padded dashboard mb-5 rounded p-3" style="border: solid black 2px">
             <div class='product-body'>
-              <p>Total Price: <strong><%= rent.total_price %></strong></p>
+            <p> <strong><%= rent.toy.title %> </strong></p>
               <p>Start Date: <strong><%= rent.start_date %>/</strong></p>
               <p>End date: <strong><%= rent.end_date %></strong></p>
-              <p>Accepted?: <strong><%= rent.acceptation %></strong></p>
-              <p>The user is: <strong><%= rent.user_id %></strong></p>
             </div>
           </li>
           <% end %>
         </ul>
       </div>
     </div>
-  <div class="col-6 d-flex justify-content align-items-center">
-    <p>Mes locations</p>
-    <div class="col-6 d-flex">
-      <p> The rents people did to me</p>
-      <div class="wrapper-dashboard padded">
+  <div class="col-6 d-flex">
+    <div>
+      <h2> The rents people did to me</h2>
+      <div class="wrapper-dashboard padded flex">
         <ul class="list-unstyled">
           <% @my_rents.each do |rent| %>
-          <li class="padded dashboard">
+          <li class="padded dashboard mb-5 rounded p-3" style="border: solid black 2px">
             <div class='product-body'>
-              <p>Total Price: <strong><%= rent.total_price %></strong></p>
               <p>Start Date: <strong><%= rent.start_date %>/</strong></p>
               <p>End date: <strong><%= rent.end_date %></strong></p>
-              <p>Accepted?: <strong><%= rent.acceptation %></strong></p>
-              <p>The user is: <strong><%= rent.user_id %></strong></p>
+              <p>Request status: <strong><%= rent.acceptation %></strong></p>
+              <p>The renter is: <strong><%= rent.user.name %></strong></p>
             </div>
+            <div style="display: flex; gap: 1em">
+        <%= button_to "Accept request", accept_owner_rent_path(rent), method: :patch %>
+        <%= button_to "Decline request", reject_owner_rent_path(rent), method: :patch %>
+        <% end %>
+        </div>
           </li>
-          <%= button_to "Accept request", accept_owner_rent_path(rent), method: :patch %>
-          <%= button_to "Decline request", reject_owner_rent_path(rent), method: :patch %>
-          <% end %>
+
         </ul>
       </div>
     </div>

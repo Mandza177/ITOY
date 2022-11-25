@@ -70,8 +70,8 @@ puts "creating toys done"
 
 puts "creating rents"
 
-Rent.create!(user: pierre, toy: faucon_millenium, start_date: "2022-11-25", end_date: "2022-11-26", total_price: 120, acceptation: "pending")
-Rent.create!(user: john, toy: ferrari, start_date: "2022-11-28", end_date: "2022-11-29", total_price: 30, acceptation: "accepted")
+Rent.create!(user: john, toy: faucon_millenium, start_date: "2022-11-25", end_date: "2022-11-26", total_price: 120, acceptation: "pending")
+Rent.create!(user: pierre, toy: ferrari, start_date: "2022-11-28", end_date: "2022-11-29", total_price: 30, acceptation: "accepted")
 Rent.create!(user: thomas, toy: bonsai, start_date: "2022-11-26", end_date: "2022-11-30", total_price: 150, acceptation: "rejected")
 Rent.create!(user: marc, toy: the_poudlard_express, start_date: "2022-12-12", end_date: "2022-12-17", total_price: 200, acceptation: "pending")
 

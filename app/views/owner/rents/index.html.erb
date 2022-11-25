@@ -10,17 +10,22 @@
        <p> The rents I have done</p>
         <div class="wrapper-dashboard padded">
           <ul class="list-unstyled">
-            <% @toys.each do |toy| %>
+            <% @rents.each do |rent| %>
             <li class="padded dashboard">
               <%# <%= cl_image_tag %> %>
 
-              <div class='product-body'>
 
-                <h2><strong><%= toy.title %></strong></h2>
-                <h4>Located in <strong><%= toy.city %></strong></h4>
-                <h4>Description: <%=toy.description%></h4>
-                <h4>Price: <strong><%= toy.price %>€/day </strong></h4>
+
+                 <div class='product-body'>
+                <p>Total Price: <strong><%= rent.total_price %></strong></p>
+                <p>Start Date: <strong><%= rent.start_date %>/</strong></p>
+                <p>End date: <strong><%= rent.end_date %></strong></p>
+                <p>Accepted?: <strong><%= rent.acceptation %></strong></p>
+                <p>The user is: <strong><%= rent.user_id %></strong></p>
               </div>
+
+
+
             </li>
               <hr>
               <% end %>
@@ -33,7 +38,7 @@
       <p> The rents people did to me</p>
         <div class="wrapper-dashboard padded">
           <ul class="list-unstyled">
-            <% @rents.each do |rent| %>
+            <% @my_rents.each do |rent| %>
             <li class="padded dashboard">
               <%# <%= cl_image_tag %> %>
 
@@ -46,6 +51,8 @@
               </div>
             </li>
               <hr>
+              <%= button_to "Accept request", accept_owner_rent_path(rent), method: :patch %>
+              <%= button_to "Decline request", reject_owner_rent_path(rent), method: :patch %>
               <% end %>
           </ul>
         </div>

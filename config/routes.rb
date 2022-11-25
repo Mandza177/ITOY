@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   root "pages#home"
   namespace :owner do
     resources :toys, only: [:index, :new, :create]
-    resources :rents, except: [:index, :new, :show, :create, :edit, :update, :destroy] do
+    resources :rents, only: [:index] do
       member do
         patch :accept
         patch :reject

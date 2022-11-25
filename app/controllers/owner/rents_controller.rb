@@ -1,6 +1,6 @@
 class Owner::RentsController < ApplicationController
   def index
-    @toys = current_user.toys
+    @rents = current_user.rents
   end
 
   def update

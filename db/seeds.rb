@@ -5,8 +5,6 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
-
 User.destroy_all
 
 puts "creating user"
@@ -41,7 +39,7 @@ eiffel_tower.photo.attach(io: eiffel_tower_image, filename: "nes.png", content_t
 eiffel_tower.save!
 
 taj_mahal_image = URI.open("https://res.cloudinary.com/df1pesufu/image/upload/v1669135535/Capture_d_%C3%A9cran_382_n3gipg.png")
-taj_mahal = Toy.new(title: "The Taj Mahal", description: "The Taj Mahal is a incredible monument", price: 100, city: "Reims", user: pierre)
+taj_mahal = Toy.new(title: "The Taj Mahal", description: "The Taj Mahal is a incredible monument", price: 100, city: "Reims", user: marc)
 taj_mahal.photo.attach(io: taj_mahal_image, filename: "nes.png", content_type: "image/png")
 taj_mahal.save!
 
@@ -68,3 +66,13 @@ puts "creating toys done"
 # Toy.new(title: "AT-AT", description: "Killer Dog", price: 180, city: "Bordeaux")
 # Toy.new(title: "R2-D2", description: "Your new Best-friend", price: 90, city: "Poitiers")
 # Toy.new(title: "Imperial Star Destroyer", description: "Your uber's just arrived", price 200, city: "Alençon")
+
+
+puts "creating rents"
+
+Rent.create!(user: pierre, toy: faucon_millenium, start_date: "2022-11-25", end_date: "2022-11-26", total_price: 120, acceptation: "pending")
+Rent.create!(user: john, toy: ferrari, start_date: "2022-11-28", end_date: "2022-11-29", total_price: 30, acceptation: "accepted")
+Rent.create!(user: thomas, toy: bonsai, start_date: "2022-11-26", end_date: "2022-11-30", total_price: 150, acceptation: "rejected")
+Rent.create!(user: marc, toy: the_poudlard_express, start_date: "2022-12-12", end_date: "2022-12-17", total_price: 200, acceptation: "pending")
+
+puts "creating rents done"
